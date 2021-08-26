@@ -3,10 +3,10 @@ from airflow import models
 from airflow.contrib.operators import bigquery_operator
 from airflow.contrib.operators import gcs_to_bq
 
-#<<IMPORTANT>> Edit 2 global valuables with your appropreate bucket and dataset name!!
+#<<IMPORTANT>> Edit global variables with your appropreate bucket name!!
 g_s_bucket = 'composer-handson-test'
-g_d_dataset = 'composer_handson_admin_'
-##--
+#--
+g_d_dataset = 'composer_handson'
 g_d_table = 'd_table'
 
 default_dag_args = {
