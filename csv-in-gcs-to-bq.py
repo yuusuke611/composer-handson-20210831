@@ -4,7 +4,7 @@ from airflow.contrib.operators import bigquery_operator
 from airflow.contrib.operators import gcs_to_bq
 
 #<<IMPORTANT>> Edit global variables with your appropreate bucket name!!
-g_s_bucket = 'composer-handson-test'
+g_s_bucket = 'composer-handson-test01'
 #--
 g_d_dataset = 'composer_handson'
 g_d_table = 'd_table'
@@ -32,7 +32,7 @@ with models.DAG(
         write_disposition='WRITE_TRUNCATE',
         schema_fields=[
           {'name':'name','type':'STRING','mode':'NULLABLE'},
-          {'name':'sex','type':'STRING','mode':'NULLABLE'},
+          {'name':'gender','type':'STRING','mode':'NULLABLE'},
           {'name':'number','type':'INTEGER','mode':'NULLABLE'},
         ], 
     )
